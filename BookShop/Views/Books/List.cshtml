@@ -1,0 +1,18 @@
+﻿
+    <h1>Wszystkie książki</h1>
+    <h3>@Model.currCategory</h3>
+    <div class="row mt-5 mb-2">
+    @{
+        foreach(var books in Model.allBooks)
+        {
+            <div class="col-lg-4">
+            <img class="img-thumbnail" src="@books.img" alt="@books.title" />
+            <h2>@books.title</h2>
+            <p>@books.shortDesc</p>
+            <p>Cena: @books.price.ToString("c")</p>
+            <p><a class="btn btn-warning" href="#">Więcej szczegółów</p>
+            </div>
+
+        }
+    }
+</div>
